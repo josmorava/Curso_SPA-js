@@ -120,3 +120,21 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+@media (max-width: 780px) {
+	.characters {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.characters {
+		grid-template-columns: 1fr;
+	}
+
+	.Characters-inner {
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+		grid-row-gap: 0;
+	}
+}
