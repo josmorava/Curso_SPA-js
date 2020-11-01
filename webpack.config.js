@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+//paquete de webpack de estilos
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -27,6 +29,10 @@ module.exports = {
                 filename: './index.html',
             }
         ),
+        new CopyWebpackPlugin({
+            patterns: [{from : './src/styles/styles.css',
+            to: '' }],
+        }),
     ]
 
 }
